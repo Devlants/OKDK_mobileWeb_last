@@ -20,7 +20,7 @@ const GoogleLogin = (props) => {
       try {
         const res = await axios({
           method: "GET",
-          url: `/account/google/callback/?access_token=${accessToken}`,
+          url: `http://3.36.95.105/account/google/callback/?access_token=${accessToken}`,
           headers: {
             "Content-Type": "application/json;charset=utf-8",
             "Access-Control-Allow-Origin": "*",

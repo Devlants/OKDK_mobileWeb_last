@@ -19,7 +19,7 @@ const NaverLogin = (props) => {
       try {
         const res = await axios({
           method: "GET",
-          url: `/account/naver/callback/?code=${code}`,
+          url: `http://3.36.95.105/account/naver/callback/?code=${code}`,
           headers: {
             "Content-Type": "application/json;charset=utf-8",
             "Access-Control-Allow-Origin": "*",
