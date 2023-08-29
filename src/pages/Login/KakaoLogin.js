@@ -15,10 +15,6 @@ const KakaoLogin = (props) => {
   useEffect(() => {
     const kakaoLogin = async () => {
       try {
-        // const res = await authInstance.get(
-        //   `/account/kakao/callback/?code=${code}`
-        // );
-
         const res = await axios({
           method: "GET",
           url: `http://3.36.95.105/account/kakao/callback/?code=${code}`,
@@ -29,8 +25,6 @@ const KakaoLogin = (props) => {
 
         const accessToken = res.data["access"];
         const refreshToken = res.data["refresh"];
-
-        console.log("2", accessToken, refreshToken);
 
         //react-native에 메세지 전송
         if (window.ReactNativeWebView) {
