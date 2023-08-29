@@ -10,7 +10,7 @@ export default function Login() {
     try {
       const api_key = process.env.REACT_APP_KAKAO_API_KEY; //REST API KEY
       const redirect_uri =
-        "https://voluble-basbousa-74cfc0.netlify.app//kakao/callback/"; //Redirect URI
+        "https://voluble-basbousa-74cfc0.netlify.app/kakao/callback/"; //Redirect URI
       const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${api_key}&redirect_uri=${redirect_uri}&response_type=code`;
 
       window.location.replace(kakaoURL);
