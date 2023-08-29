@@ -68,7 +68,7 @@ const refreshAccessToken = async () => {
 
   try {
     const response = await axios.post(
-      BASE_URL + "/account/refresh/access_token/",
+      BASE_URL + "account/refresh/access_token/",
       body,
       {
         headers: {
