@@ -135,11 +135,15 @@ export default function Home() {
           >
             {recents && recents.length > 0
               ? recents.map((item, index) => {
+                  const firstOption = item?.options?.[0];
+                  const menuImage = firstOption?.menu?.image;
+                  const menuName = firstOption?.menu?.name;
+
                   return (
                     <CoffeeComponent
-                      imgURI={item?.options[0]?.menu_image}
+                      imgURI={menuImage}
                       first_description={item?.brand}
-                      second_description={item?.options[0]?.menu_name}
+                      second_description={menuName}
                       background="#0583F2"
                     />
                   );
