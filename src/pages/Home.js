@@ -124,7 +124,7 @@ export default function Home() {
         </ListBox>
         <ListBox
           listTitle={"최근 이용 내역"}
-          handleShowMore={() => alert("어디로 가요?")}
+          handleShowMore={() => navigation("/PaymentDetail")}
         >
           <div
             style={{
