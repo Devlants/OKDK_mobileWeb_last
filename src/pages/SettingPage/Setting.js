@@ -98,27 +98,7 @@ export default function Setting() {
     }
   };
 
-  const NaverLogout = () => {
-    console.log("네이버 로그아웃");
-    localStorage.clear();
-  };
-
-  const GoogleLogout = () => {
-    console.log("구글 로그아웃");
-    localStorage.clear();
-  };
-
-  const handleLogout = async (social) => {
-    if (social === "카카오톡") {
-      await KakaoLogout();
-    }
-    if (social === "구글") {
-      GoogleLogout();
-    }
-    if (social === "네이버") {
-      NaverLogout();
-    }
-
+  const handleLogout = async () => {
     console.log("native asyncStorage 없애기");
     //react-native에 메세지 전송
     if (window.ReactNativeWebView) {
@@ -128,6 +108,8 @@ export default function Setting() {
         })
       );
     }
+
+    localStorage.clear();
   };
 
   return (
@@ -163,7 +145,7 @@ export default function Setting() {
             <ItemContainer>계정 관리</ItemContainer>
           </BlurEffect>
         </ListBoxContainer>
-        <ListBoxContainer onClick={() => handleLogout(social)}>
+        <ListBoxContainer onClick={() => handleLogout()}>
           <BlurEffect>
             <ItemContainer>로그아웃</ItemContainer>
           </BlurEffect>
