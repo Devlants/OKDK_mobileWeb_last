@@ -82,7 +82,7 @@ export default function AddFavoriteMenu() {
 
   return (
     <>
-      <TopNavigation />
+      <TopNavigation navigation={navigation} destination={"Home"} />
       <Modal
         title={`${
           selectedStoreName ? selectedStoreName : "undefined"

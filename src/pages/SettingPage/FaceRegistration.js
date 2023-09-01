@@ -62,7 +62,7 @@ export default function FaceRegistration() {
 
   return (
     <Body>
-      <TopNavigation navigation={navigation} destination={"Setting"} />
+      <TopNavigation navigation={navigation} destination={"Home"} />
       <ScrollWrap>
         <PaymentTitle
           name={user ? user.nickname : "익명"}

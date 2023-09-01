@@ -96,7 +96,7 @@ export default function AddStoreToEarning() {
 
   return (
     <>
-      <TopNavigation navigation={navigation} destination={"Payment"} />
+      <TopNavigation navigation={navigation} destination={"Home"} />
       <Modal
         title={"멤버십을 적립할\n 브랜드를 선택해주세요"}
         basicButtonName="확인"

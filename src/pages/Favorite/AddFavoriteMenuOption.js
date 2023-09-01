@@ -111,7 +111,7 @@ export default function AddFavoriteMenuOption() {
 
   return (
     <>
-      <TopNavigation />
+      <TopNavigation navigation={navigation} destination={"Home"} />
       <Modal
         title={"선택한 메뉴의\n옵션을 추가해주세요"}
         basicButtonName="확인"

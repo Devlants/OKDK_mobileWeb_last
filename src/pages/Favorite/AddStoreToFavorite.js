@@ -61,7 +61,7 @@ export default function AddStoreToEarning() {
 
   return (
     <>
-      <TopNavigation />
+      <TopNavigation navigation={navigation} destination={"Home"} />
       <Modal
         title={`${
           user ? user.nickname : "익명"

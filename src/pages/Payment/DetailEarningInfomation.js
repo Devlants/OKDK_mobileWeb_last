@@ -133,7 +133,7 @@ export default function DetailEarningInfomation() {
 
   return (
     <>
-      <TopNavigation navigation={navigation} destination={"Payment"} />
+      <TopNavigation navigation={navigation} destination={"Home"} />
       <Modal
         title={brand}
         basicButtonName="확인"
