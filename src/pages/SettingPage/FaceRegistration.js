@@ -49,7 +49,6 @@ export default function FaceRegistration() {
   // parameter management------------------------------
   const location = useLocation();
   const user = location.state && location.state.user;
-  console.log(user);
 
   const handleUpdateFace = () => {
     if (window.ReactNativeWebView) {
@@ -63,7 +62,7 @@ export default function FaceRegistration() {
 
   return (
     <Body>
-      <TopNavigation navigation={navigation} />
+      <TopNavigation navigation={navigation} destination={"Setting"} />
       <ScrollWrap>
         <PaymentTitle
           name={user ? user.nickname : "익명"}
@@ -89,7 +88,15 @@ export default function FaceRegistration() {
               />
             </>
           ) : (
-            <UndefinedText>얼굴 데이터를 등록하세요</UndefinedText>
+            <>
+              <UndefinedText>얼굴 데이터를 등록하세요</UndefinedText>
+              <BasicButton
+                width={"15rem"}
+                height={"3rem"}
+                btnName="등록하기"
+                onClick={() => handleUpdateFace()}
+              />
+            </>
           )}
         </PaymentWrap>
       </ScrollWrap>

@@ -65,7 +65,7 @@ export default function AccountOfficer() {
 
   return (
     <Body>
-      <TopNavigation navigation={navigation} />
+      <TopNavigation navigation={navigation} destination={"Setting"} />
       <ScrollWrap>
         <PaymentTitle
           name={user ? user.nickname : "익명"}

@@ -161,7 +161,7 @@ export default function PaymentDetail() {
 
   return (
     <Body>
-      <TopNavigation navigation={navigation} />
+      <TopNavigation navigation={navigation} destination={"Payment"} />
       <ScrollWrap>
         <PaymentTitle
           name={user.nickname || "익명"}

@@ -99,7 +99,7 @@ export default function PaymentHistoryReceipt() {
   const user = location.state && location.state.user;
   return (
     <Body>
-      <TopNavigation navigation={navigation} />
+      <TopNavigation navigation={navigation} destination={"Payment"} />
       <ScrollWrap>
         <PaymentTitle name={user || "익명"} describe={"결제내역 입니다."} />
         <PaymentWrap>
