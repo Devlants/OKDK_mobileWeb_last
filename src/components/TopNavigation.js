@@ -27,15 +27,19 @@ export const ArrowBackImage = styled.img`
   left: 1rem;
 `;
 
-export default function TopNavigation({ navigation }) {
+const navigateWebView = (destination) => {
+  console.log(destination);
+  if (window.ReactNativeWebView) {
+    window.ReactNativeWebView.postMessage(
+      JSON.stringify({ status: `${destination}` })
+    );
+  }
+};
+
+export default function TopNavigation({ navigation, destination }) {
   return (
     <WrapTopNavigation>
-      <LogoImage
-        src={Logo}
-        onClick={() => {
-          navigation("/");
-        }}
-      />
+      <LogoImage src={Logo} onClick={() => navigateWebView(destination)} />
       <ArrowBackImage
         src={ArrowBack}
         onClick={() => {
